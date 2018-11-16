@@ -18,3 +18,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/community', function() {
+    return view('community');
+});
+
+Route::get('/maintenance', function() {
+    return view('maintenance');
+});
+
+Route::get('/plantday', function() {
+    return view('plantday');
+});

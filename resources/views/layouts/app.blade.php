@@ -18,8 +18,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
+    <!-- nav bar van bootstrap -->
+    @include('inc.navbar')
+
+    <!-- nav bar van laravel login ding -->
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
@@ -73,8 +78,20 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+         
         </main>
+
     </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-8">
+            @yield('content')
+            </div>
+        </div>
+    </div>
+
+
 </body>
 </html>
